@@ -1,3 +1,9 @@
 #!/bin/bash
 
+# Script that downloads (copies from) a file stored in the designated bucket 
+# to local, then invokes gpg -d for decryption
+# Usage: s3get <filename>
+# Anish Sujanani, December 2022
+
 aws --profile $S3PERSONALSTORAGECLIPROFILE s3 cp $S3PERSONALSTORAGEBUCKETPATH/$1 .
+gpg -d $1 > $(basename $1 .gpg)

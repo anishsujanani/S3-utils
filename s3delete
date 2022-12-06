@@ -1,3 +1,7 @@
 #!/bin/bash
 
+# Script that deletes a file stored in the designated bucket
+# Usage: s3delete <filename>
+# Anish Sujanani, December 2022
+
 aws --profile $S3PERSONALSTORAGECLIPROFILE s3 rm $S3PERSONALSTORAGEBUCKETPATH/$1

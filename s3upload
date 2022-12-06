@@ -1,4 +1,9 @@
 #!/bin/bash
 
+# Script that invokes gpg for encryption, then uploads (copies) 
+# a file from local to the designated bucket
+# Usage: s3upload <path/to/file>
+# Anish Sujanani, December 2022
+
 gpg -c $1
 aws --profile $S3PERSONALSTORAGECLIPROFILE s3 cp $1.gpg $S3PERSONALSTORAGEBUCKETPATH
