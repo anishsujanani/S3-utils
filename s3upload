@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gpg -c $1
+aws --profile $S3PERSONALSTORAGECLIPROFILE s3 cp $1.gpg $S3PERSONALSTORAGEBUCKETPATH
