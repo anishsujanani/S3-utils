@@ -5,7 +5,7 @@ Helper bash scripts for file operations on an S3 bucket for my personal off-mach
 ## Requirements
 - needs `gnupg` installed
 - needs `awscli` installed 
-- needs env vars configured: `S3PERSONALSTORAGEBUCKETPATH` & `S3PERSONALSTORAGECLIPROFILE`
+- needs env vars configured: `S3PERSONALSTORAGEBUCKETPATH` (`s3://`) & `S3PERSONALSTORAGECLIPROFILE`
 - needs IAM policy configured for user, key/secret generated
     - ```json
         {
